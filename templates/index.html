@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-5.0.0-beta2-dist/css/style.css"/>
+</head>
+<body>
+  <header>
+      <div class="main">
+        <div class="logo">
+          <img src="/static/textfx.png" width="50" height="75">
+        </div>
+          <ul class="menu">
+             <li class="active" ><a href="#home">Home</a></li>
+             <li><a href="#service">Service</a></li>
+             <li><a href="#info">Pneumonia Information</a></li>
+             <li><a href="#contact">Contacts</a></li>
+
+          </ul>
+      </div>
+      <form class="form-upload" method=POST enctype=multipart/form-data>
+        <h1 class="title">Please upload image</h1>
+        <br>
+        <input type="file" id="image" name="image" class="form-control" required autofocus>
+        <br>
+     
+         <div class="predi">
+           <br>
+           <br>
+             <button style="background-color:#fff; font-size: 18px; color: rgb(0, 0, 0);border-width: 0ex; " type="submit">predict</button>
+        <br>
+        <br>
+        <h3 class="title">prediction: {{prediction}}</h3>
+        <h3 class="title">confidence:  {{prob}}</h3> 
+        </div>
+        <br>
+        {% if img_loc %}
+        <img class="mb-4" src="/static/chestx/test/NORMAL/{{img_loc}}" alt=" " width="270" height="210">
+        {%endif%}
+      </form>
+<!-- hitwebcounter Code START -->
+<div class="counter">
+  <h3>Total visitor:</h3>
+  <a href="https://www.hitwebcounter.com" target="_blank">
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7765276&style=0019&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>                                    
+  </div>                                 
+<div class="home-area" id="home">
+</div>
+ <div class="pneumonia-lung">
+  <img src="/static/pneumonia_day.jpg" width="250" height="350" >
+ </div>
+<div class="service-area" id="service">
+  <section class="sertext">
+    <h1>Pneumonia accounts for 15% of all deaths of children under 5 years old, killing 808 694 children in 2017.</h1>
+  <p>Pneupred is a  free medical service that helps you assess pneumonia Prediction. <br><br>
+
+    Take a photo of the chest x-ray with your smartphone and you receive a Pneumonia prediction by our clinically validated technology within 30 seconds. We provide recommendations on the next steps to take, including whether to visit a healthcare professional.<br><br>
+    
+    We aim to raise awareness of Pneumonia and provide a regulated medical device to help individuals assess their risk and get to the doctor in time..</p>
+  </section>
+  <div class="vl"></div>
+  <div class="take-photo">
+    <img src="/static/Take-a-photo.png" width="150" height="120" >
+    <div class="take-photo-text"> 
+    <h2>Take a photo of your Chest X-ray</h2>
+  </div>
+  </div>
+  <div class="receive">
+    <img src="/static/Receive.png" width="150" height="120" >
+    <div class="receive-text"> 
+    <h2>Receive your risk assessment</h2>
+  </div>
+  </div>
+  <div class="schedule">
+    <img src="/static/Schedule.png" width="150" height="120" >
+    <div class="schedule-text"> 
+    <h2>Track your skin spots</h2>
+  </div>
+  </div>
+  <hr class="horiline">
+</div>
+
+<div class="info-area" id="info">
+ <div class="wrapper">
+   <nav>
+     <ul class="menubar">
+      <li class="active"><a href="#info"><strong>What is Pneumonia?</strong></a></li>
+       <li><a href="symptom"><strong>Symptoms</strong></a></li>
+       <li><a href="types"><strong>Types</strong></a></li>
+       <li><a href="diagnosis"><strong>Diagnosis</strong></a></li>
+     </ul>
+   </nav>
+ </div>
+ <div class="infotext">
+  <h1>Pneumonia</h1>
+  <video width="700" height="400" controls>
+    <source src="/static/pneumonia-video.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="whatis">
+  <h3>What is pneumonia?</h3>
+  <p>Pneumonia is a lung infection that can range from mild to so severe that you have to go to the hospital.<br>
+
+    It happens when an infection causes the air sacs in your lungs (your doctor will call them alveoli) to fill with fluid or pus. That can make it hard for you to breathe in enough oxygen to reach your bloodstream.<br><br>
+    
+    Anyone can get this lung infection. But infants younger than age 2 and people over age 65 are at higher risk. That’s because their immune systems might not be strong enough to fight it.<br><br>
+    
+    You can get pneumonia in one or both lungs. You can also have it and not know it. Doctors call this walking pneumonia. Causes include bacteria, viruses, and fungi.  If your pneumonia results from bacteria or a virus, you can spread it to someone else. <br><br> 
+    Lifestyle habits, like smoking cigarettes and drinking too much alcohol, can also raise your chances of getting pneumonia.</p><br>
+</div>
+<div class="symptoms">
+  <h3>Symptoms of pneumonia</h3>
+  <p>Your symptoms can vary depending on what’s causing your pneumonia, your age, and your overall health. They usually develop over several days.<br><br><br>
+
+
+    Common pneumonia symptoms include:<br><br>
+    
+    1.Chest pain when you breathe or cough<br>
+    2.Cough that produces phlegm or mucus<br>
+    3.Fatigue and loss of appetite<br>
+    4.Fever, sweating, and chills<br>
+    5.Nausea, vomiting, and diarrhea<br>
+    6.Shortness of breath<br><br>
+    Along with these symptoms, older adults and people with weak immune systems might be confused or have changes in mental awareness, or they might have a lower-than-usual body temperature.<br><br>
+    
+    
+    Newborns and infants may not show any signs of infection. Or they might vomit, have a fever and a cough, and seem restless or tired.<br><br>
+    
+    If you have a new cough, fever, or shortness of breath, call your doctor to ask about whether it could be COVID-19. Illness with the new coronavirus can also lead to pneumonia.</p>
+</div>
+<div class="causes">
+  <h3>Causes of pneumonia</h3>
+<p>Bacteria, viruses, or fungi can cause pneumonia.<br><br>
+
+Common causes include:<br><br>
+
+1.Flu viruses<br>
+2.Cold viruses<br>
+3.RSV virus (the top cause of pneumonia in babies age 1 or younger)<br>
+4.Bacteria called Streptococcus pneumoniae and Mycoplasma pneumoniae<br>
+Contined:<br>
+Some people who are in the hospital get “ventilator-associated pneumonia” if they got the infection while using a ventilator, a machine that helps you breathe.<br><br>
+
+If you get pneumonia while you’re in a hospital and aren’t on a ventilator, that’s called “hospital-acquired” pneumonia. But most people get “community-acquired pneumonia,” which means they didn’t get it in a hospital.</p><br>
+</div>
+<div class="treatment">
+  <h3>Pneumonia Treatment </h3>
+  <p>Your doctor can tell you which treatment is right for you.<br>
+
+    If you have bacterial pneumonia, you’ll get antibiotics. Make sure you take all of the medicine your doctor gives you, even if you start to feel better before you’re through with it.<br>
+    
+    If you have viral pneumonia, antibiotics won’t help. You’ll need to rest, drink a lot of fluids, and take medicine for your fever.<br>
+    
+    If your symptoms are severe or if you have other conditions that make you more likely to have complications, your doctor may send you to the hospital. <br>
+    
+    With any kind of pneumonia, recovery will take time. You’re going to need lots of rest. You might need a week off your usual routines, and you could still feel tired for a month.</p><br>
+</div>
+</div>
+<br>
+<br>
+      
+</body>
+</html>
